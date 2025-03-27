@@ -39,7 +39,7 @@ async function main() {
     const tools = await toolClient.tools;
     let mcpTools = [];
     if (tools.length > 0) {
-      const mcpTools = tools.map(
+        mcpTools = tools.map(
         ({ function: { name, description, parameters } }) => ({
           name,
           description: `${description}. Use the provided GraphQL schema: ${JSON.stringify(
